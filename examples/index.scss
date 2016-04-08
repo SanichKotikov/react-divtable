@@ -1,0 +1,35 @@
+* {
+    box-sizing: inherit;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 20px;
+    font-family: 'Helvetica Neue', 'Arial';
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+h4 {
+    margin-bottom: 0;
+
+    + p {
+        margin-top: 0;
+    }
+}
+
+.app {
+    width: 500px;
+}

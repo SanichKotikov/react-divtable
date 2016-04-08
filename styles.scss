@@ -1,0 +1,46 @@
+.div-table {
+    display: table;
+    border-collapse: collapse;
+
+    &__header {
+        display: table-header-group;
+    }
+
+    &__body {
+        display: table-row-group;
+    }
+
+    &__footer {
+        display: table-footer-group;
+    }
+
+    &__row {
+        display: table-row;
+
+        &.clickable {
+            cursor: pointer;
+        }
+    }
+
+    &__cell {
+        display: table-cell;
+        padding: 2px 6px;
+        border: 1px solid;
+
+        &.asc:after,
+        &.desc:after {
+            content: '\2191';
+            position: relative;
+            top: -1px;
+            left: 2px;
+        }
+
+        &.desc:after {
+            content: '\2193';
+        }
+
+        &.sortable {
+            cursor: pointer;
+        }
+    }
+}
