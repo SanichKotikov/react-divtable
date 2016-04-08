@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { CLASS_NAME } from './const';
 
-export default class Cell extends Component {
+class Cell extends Component {
 
     static propTypes = {
         className: PropTypes.string,
@@ -29,3 +29,5 @@ export default class Cell extends Component {
         );
     }
 }
+
+export default Cell;

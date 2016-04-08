@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Cell from './Cell';
 import { CLASS_NAME } from './const';
 
-export default class Row extends Component {
+class Row extends Component {
 
     static propTypes = {
         className: PropTypes.string,
@@ -43,3 +43,5 @@ export default class Row extends Component {
         );
     }
 }
+
+export default Row;

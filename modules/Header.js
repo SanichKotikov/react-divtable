@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { CLASS_NAME, ASC, DESC } from './const';
 
-export default class Header extends Component {
+class Header extends Component {
 
     static propTypes = {
         className: PropTypes.string,
@@ -51,3 +51,5 @@ export default class Header extends Component {
         );
     }
 }
+
+export default Header;
