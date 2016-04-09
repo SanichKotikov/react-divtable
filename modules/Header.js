@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import { CLASS_NAME, ASC, DESC } from './const';
+import { ASC, DESC } from 'sort-array-objects';
+import { CLASS_NAME } from './const';
 
 class Header extends Component {
 

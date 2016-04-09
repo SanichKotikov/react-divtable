@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import { CLASS_NAME, ASC, DESC } from './const';
+import sortArrayObjects, { ASC, DESC } from 'sort-array-objects';
+import { CLASS_NAME } from './const';
 
 import Header from './Header';
 import Row from './Row';
@@ -24,24 +25,13 @@ class Table extends Component {
     getSortedRows() {
         const { columns, rows, onSortChange } = this.props;
         const sortedColumn = columns.find(col => col.order !== undefined);
+        const rowsCopy = rows.slice();
 
-        if (!sortedColumn || !!onSortChange) return rows;
+        if (!!sortedColumn && !onSortChange) {
+            sortArrayObjects(rowsCopy, sortedColumn.order, sortedColumn.name);
+        }
 
-        return rows.sort((a, b) => {
-            const colA = a[sortedColumn.name];
-            const colB = b[sortedColumn.name];
-
-            if (colA < colB) return sortedColumn.order == ASC ? -1 : 1;
-            if (colA > colB) return sortedColumn.order == ASC ? 1 : -1;
-
-            // sub sorting by `id` if values are equal
-            if (sortedColumn.name !== 'id' && 'id' in a && 'id' in b) {
-                if (a.id < b.id) return -1;
-                if (a.id > b.id) return 1;
-            }
-
-            return 0;
-        });
+        return rowsCopy;
     }
 
     updateOrder(column) {

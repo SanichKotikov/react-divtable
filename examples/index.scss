@@ -13,13 +13,12 @@ html {
 body {
     height: 100%;
     margin: 20px;
-    font-family: 'Helvetica Neue', 'Arial';
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial';
     font-size: 16px;
-    line-height: 1.4;
-    font-weight: 300;
-    overflow: hidden;
-    -webkit-user-select: none;
     -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    line-height: 1.4;
+    -webkit-user-select: none;
 }
 
 h4 {
