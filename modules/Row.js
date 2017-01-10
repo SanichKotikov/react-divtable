@@ -17,7 +17,7 @@ class Row extends Component {
             className,
             columns,
             row,
-            onItemClick
+            onItemClick,
         } = this.props;
 
         const rowClasses = classNames(`${CLASS_NAME}__row`, {

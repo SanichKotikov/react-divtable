@@ -45,16 +45,16 @@ class Table extends Component {
         column.order = currentOrder === DESC ? ASC : DESC;
     }
 
-    onColumnClick(column) {
+    onColumnClick = (column) => {
         const { onSortChange } = this.props;
         this.updateOrder(column);
 
-        if (!!onSortChange) {
+        if (onSortChange) {
             onSortChange(column.name, column.order);
         } else {
             this.forceUpdate();
         }
-    }
+    };
 
     render() {
         const {
@@ -62,7 +62,7 @@ class Table extends Component {
             columns,
             footer,
             sortable,
-            onItemClick
+            onItemClick,
         } = this.props;
 
         const rows = this.getSortedRows();
@@ -86,7 +86,7 @@ class Table extends Component {
                         className={className}
                         columns={columns}
                         sortable={sortable}
-                        onColumnClick={::this.onColumnClick}
+                        onColumnClick={this.onColumnClick}
                     />
                     <div className={bodyClasses}>
                         {rows.map((row, index) => (

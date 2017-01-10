@@ -17,7 +17,7 @@ class Header extends Component {
             className,
             columns,
             sortable,
-            onColumnClick
+            onColumnClick,
         } = this.props;
 
         const headerClasses = classNames(`${CLASS_NAME}__header`, {
@@ -27,7 +27,6 @@ class Header extends Component {
         return (
             <div className={headerClasses}>
                 {columns.map((column, index) => {
-
                     if (column.exclude === true) return null;
 
                     const isSortable = sortable !== false && column.sortable !== false;

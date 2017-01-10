@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 import './index.css';
 
-import Table, { ASC, DESC } from 'react-divtable';
+import Table, { DESC } from 'react-divtable';
 import 'react-divtable/styles.scss';
 
 import './table.css';
@@ -30,8 +30,8 @@ class App extends Component {
         {
             name: 'date',
             order: DESC,
-            render: val => (new Date(val)).toDateString()
-        }
+            render: val => (new Date(val)).toDateString(),
+        },
     ];
 
     columns2 = [
@@ -53,15 +53,15 @@ class App extends Component {
         this.footer2 = this.createFooterRow();
     }
 
-    onRowClick(row) {
+    onRowClick = (row) => {
         this.setState({ 'example1-row': row });
-    }
+    };
 
-    sortHandler(column, order) {
+    sortHandler = (column, order) => {
         // Your custom sort function here,
         // where you have to update this.rows2 and call forceRender.
         this.setState({ 'example2-column': { column: column, order: order } });
-    }
+    };
 
     createFooterRow() {
         const footer = {};
@@ -93,7 +93,7 @@ class App extends Component {
                 <Table
                     columns={this.columns}
                     rows={TEST_ROWS}
-                    onItemClick={::this.onRowClick}
+                    onItemClick={this.onRowClick}
                 />
                 <p>Row: {JSON.stringify(this.state['example1-row'])}</p>
                 <h4>Example #2</h4>
@@ -103,7 +103,7 @@ class App extends Component {
                     className='my-table'
                     columns={this.columns2}
                     rows={this.rows2}
-                    onSortChange={::this.sortHandler}
+                    onSortChange={this.sortHandler}
                     footer={this.footer2}
                 />
                 <p>Column: {JSON.stringify(this.state['example2-column'])}</p>
