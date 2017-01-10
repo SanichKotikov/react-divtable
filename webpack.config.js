@@ -1,6 +1,9 @@
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
+var postcssNesting = require('postcss-nesting');
+var customProperties = require("postcss-custom-properties");
+var colorFunction = require("postcss-color-function");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -27,8 +30,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss?$/,
-                loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass?sourceMap')
+                test: /\.s?css$/,
+                loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss?sourceMap')
             }
         ]
     },
@@ -38,5 +41,10 @@ module.exports = {
             'react-divtable/styles.scss$': path.join(__dirname, 'styles.scss')
         }
     },
-    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
+    postcss: [
+        postcssNesting(),
+        customProperties(),
+        colorFunction(),
+        autoprefixer({ browsers: ['last 2 versions'] })
+    ]
 };

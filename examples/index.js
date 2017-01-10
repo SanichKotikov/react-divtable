@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import './index.scss';
+import './index.css';
 
 import Table, { ASC, DESC } from 'react-divtable';
 import 'react-divtable/styles.scss';
 
-import './table.scss';
+import './table.css';
 
 const TEST_ROWS = [
     { id: 1, title: 'React', date: 1458813079000 },

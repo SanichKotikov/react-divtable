@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cdrpro/react-divtable.git"
+    "url": "git+https://github.com/SanichKotikov/react-divtable.git"
   },
   "author": "Sanich <sancho@cdrpro.ru> (http://cdrpro.ru)",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "ui"
   ],
   "bugs": {
-    "url": "https://github.com/cdrpro/react-divtable/issues"
+    "url": "https://github.com/SanichKotikov/react-divtable/issues"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -44,9 +44,10 @@
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.15.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "node-sass": "^3.4.2",
+    "postcss-color-function": "^2.0.1",
+    "postcss-custom-properties": "^5.0.1",
     "postcss-loader": "^0.8.2",
-    "sass-loader": "^3.2.0",
+    "postcss-nesting": "^2.3.1",
     "style-loader": "^0.12.3",
     "webpack": "^1.9.11"
   },
@@ -56,5 +57,5 @@
     "react-dom": "^15.0.0",
     "sort-array-objects": "2.0.0"
   },
-  "homepage": "https://github.com/cdrpro/react-divtable"
+  "homepage": "https://github.com/SanichKotikov/react-divtable"
 }

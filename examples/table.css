@@ -1,10 +1,12 @@
-$light-gray: #eee;
-$gray: #ccc;
-$green: #d9f1d4;
-$yellow: #fff9dd;
+:root {
+    --light-gray: #eee;
+    --gray: #ccc;
+    --green: #d9f1d4;
+    --yellow: #fff9dd;
+}
 
-// override default styles,
-// or write your own if you don't use react-divtable/styles.scss
+/* override default styles, */
+/* or write your own if you don't use react-divtable/styles.css */
 
 .div-table {
     width: 100%;
@@ -14,26 +16,26 @@ $yellow: #fff9dd;
         width: 100%;
         margin: 20px 0;
         overflow: hidden;
-        border: 1px solid $gray;
+        border: 1px solid var(--gray);
         border-radius: 4px;
     }
 
     &__header {
         font-size: .8em;
         text-transform: uppercase;
-        background: $light-gray;
-        border-bottom: 1px solid $gray;
+        background: var(--light-gray);
+        border-bottom: 1px solid var(--gray);
     }
 
     &__row {
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid var(--gray);
 
         &:last-child {
             border: 0;
         }
 
         &.clickable:hover {
-            background: $green;
+            background: var(--green);
         }
     }
 
@@ -48,32 +50,32 @@ $yellow: #fff9dd;
     }
 }
 
-// Custom class
+/* Custom class */
 
 .my-table {
     table-layout: fixed;
 
     &__wrapper {
-        border-color: darken($green, 20%);
+        border-color: color(var(--green) lightness(-20%));
     }
 
     &__header {
-        background: $green;
-        border-color: darken($green, 20%);
+        background: var(--green);
+        border-color: color(var(--green) lightness(-20%));
     }
 
     &__footer {
         font-size: .8em;
-        border-top: 1px solid darken($green, 20%);
+        border-top: 1px solid color(var(--green) lightness(-20%));
     }
 
     &__row {
-        background: $yellow;
-        border-color: darken($yellow, 20%);
+        background: var(--yellow);
+        border-color: color(var(--yellow) lightness(-20%));
     }
 
     &__footer &__row {
-        background: $green;
+        background: var(--green);
     }
 
     &__cell {
@@ -89,7 +91,7 @@ $yellow: #fff9dd;
 
         &.asc,
         &.desc {
-            background: darken($green, 6%);
+            background: color(var(--green) lightness(-8%));
         }
     }
 }
