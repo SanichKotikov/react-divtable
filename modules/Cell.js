@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import { CLASS_NAME } from './const';
 
 class Cell extends Component {
 
-    static propTypes = {
-        className: PropTypes.string,
-        column: PropTypes.object.isRequired,
-        row: PropTypes.object.isRequired,
-    };
+    // static propTypes = {
+    //     className: PropTypes.string,
+    //     column: PropTypes.object.isRequired,
+    //     row: PropTypes.object.isRequired,
+    // };
 
     render() {
         const { className, column, row } = this.props;

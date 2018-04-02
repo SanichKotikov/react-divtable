@@ -1,16 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import { ASC, DESC } from 'sort-array-objects';
 import { CLASS_NAME } from './const';
 
 class Header extends Component {
 
-    static propTypes = {
-        className: PropTypes.string,
-        columns: PropTypes.array.isRequired,
-        sortable: PropTypes.bool,
-        onColumnClick: PropTypes.func,
-    };
+    // static propTypes = {
+    //     className: PropTypes.string,
+    //     columns: PropTypes.array.isRequired,
+    //     sortable: PropTypes.bool,
+    //     onColumnClick: PropTypes.func,
+    // };
 
     render() {
         const {
