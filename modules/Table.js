@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import sort, { ASC, DESC } from 'sort-array-objects';
 import { CLASS_NAME } from './const';
@@ -12,15 +12,15 @@ class Table extends Component {
         sortable: true,
     };
 
-    static propTypes = {
-        className: PropTypes.string,
-        columns: PropTypes.array.isRequired,
-        rows: PropTypes.array.isRequired,
-        footer: PropTypes.object,
-        sortable: PropTypes.bool,
-        onItemClick: PropTypes.func,
-        onSortChange: PropTypes.func,
-    };
+    // static propTypes = {
+    //     className: PropTypes.string,
+    //     columns: PropTypes.array.isRequired,
+    //     rows: PropTypes.array.isRequired,
+    //     footer: PropTypes.object,
+    //     sortable: PropTypes.bool,
+    //     onItemClick: PropTypes.func,
+    //     onSortChange: PropTypes.func,
+    // };
 
     getSortedRows() {
         const { columns, rows, onSortChange } = this.props;

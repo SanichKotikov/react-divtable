@@ -1,6 +1,6 @@
 {
   "name": "react-divtable",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A simple sortable table (div) component for react",
   "main": "./lib/index",
   "jsnext:main": "./es6/index",
